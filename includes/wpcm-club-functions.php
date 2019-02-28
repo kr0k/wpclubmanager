@@ -7,58 +7,44 @@
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Functions
- * @version     1.4.0
+ * @version     1.5.9
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 function wpcm_head_to_heads( $post ) {
+	
+	global $wpdb;
 
 	$club = get_default_club();
+	$querystr = "
+	SELECT {$wpdb->prefix}posts.*
+		
+		FROM {$wpdb->prefix}posts 
 
-	// get matches
-	$query_args = array(
-		'numberposts' => '-1',
-		'order' => 'ASC',
-		'orderby' => 'post_date',
-		'post_type' => 'wpcm_match',
-		'post_status' => array('publish'),
-		'posts_per_page' => '-1'
-	);
+		INNER JOIN {$wpdb->prefix}postmeta
+		ON ( {$wpdb->prefix}posts.ID = {$wpdb->prefix}postmeta.post_id ) 
+		AND( {$wpdb->prefix}postmeta.meta_key = 'wpcm_home_club' 
+		AND {$wpdb->prefix}postmeta.meta_value IN ('$post','$club') ) 
 
+		INNER JOIN {$wpdb->prefix}postmeta AS mt1
+		ON ( {$wpdb->prefix}posts.ID = mt1.post_id  
+		AND  mt1.meta_key = 'wpcm_away_club' and mt1.meta_value IN ('$post','$club') )
 
-	$query_args['meta_query'] = array(
-		'relation' => 'OR',
-		array(
-			'relation' => 'AND',
-			array (
-				'key' => 'wpcm_home_club',
-				'value' => $club,
-			),
-			array (
-				'key' => 'wpcm_away_club',
-				'value' => $post,
-			),
-		),
-		array(
-			'relation' => 'AND',
-			array (
-				'key' => 'wpcm_home_club',
-				'value' => $post,
-			),
-			array (
-				'key' => 'wpcm_away_club',
-				'value' => $club,
-			),
-		)
-	);
+		WHERE 
+		1=1 AND 
+		{$wpdb->prefix}posts.post_type = 'wpcm_match' AND 
+		(({$wpdb->prefix}posts.post_status = 'publish'))
 
-	$matches = get_posts( $query_args );
+		GROUP BY {$wpdb->prefix}posts.ID
+		
+		ORDER BY {$wpdb->prefix}posts.post_date ASC
+	";
+	$matches = $wpdb->get_results($querystr, OBJECT);
 
 	wp_reset_postdata();
 
 	return $matches;
-
 }
 
 function wpcm_head_to_head_count( $matches ) {
@@ -102,6 +88,30 @@ function wpcm_head_to_head_count( $matches ) {
 	$outcome['draws'] = $draws;
 	$outcome['losses'] = $losses;
 
-	return $outcome;
+	return apply_filters( 'wpcm_head_to_head_count', $outcome, $matches );
 
 }
+
+function get_club_venue( $post ) {
+
+	$id = get_the_terms( $post, 'wpcm_venue' );
+	
+	if ( is_array( $id ) ) {
+		$venues = reset($id);
+		$t_id = $venues->term_id; 
+		$venue_meta = get_option( "taxonomy_term_$t_id" );
+		$venue['id'] = $t_id;
+		$venue['name'] = $venues->name;
+		if( is_array( $venue_meta ) ) {
+			if( array_key_exists('wpcm_address', $venue_meta) ) {
+				$venue['address'] = $venue_meta['wpcm_address'];
+			}
+			if( array_key_exists('wpcm_capacity', $venue_meta) ) {
+				$venue['capacity'] = $venue_meta['wpcm_capacity'];
+			}
+		}
+		$venue['description'] = $venues->description;
+	}
+	 return $venue;
+}
+	
