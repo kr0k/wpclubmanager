@@ -1,5 +1,7 @@
-=== WP Club Manager - WordPress Sports Club Plugin===
-Contributors: clubpress, leonterry, leabu85
+WP Club Manager - WordPress Sports Club Plugin
+===
+
+Contributors: clubpress, leonterry, leabu85, kr0k
 Tags: club, teams, sports, sports club, club management, club website, league management, league tables, team rosters, fixtures, results 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 4.7
@@ -10,17 +12,19 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 WP Club Manager is easy to set-up and has everything you need to build and manage a pro sports club or league website.
 
-== Description ==
-= Build A Pro Sports Club or League Website =
+Description
+=== 
+Build A Pro Sports Club or League Website =
 WP Club Manager is a sports plugin used to create and manage a club or league website with WordPress. Quick and easy to set-up, you can manage clubs, player profiles and performance data, staff, sponsors, league tables, keep track of your fixtures and results and loads more.
 
-= Endorsed by USA Rugby =
+Endorsed by USA Rugby
+---
 
 > "*It's perfect for the professional sports web developer and the first-time team administrator. Incredibly easy to customize and integrate, I highly recommend WP Club Manager to any sports team who wants a better website!*"  
 Davey Jacobson, *Digital Platform Developer*, [USA Rugby](http://usarugby.org)
 
-= Features Include =
-
+Features Include
+---
 * Club or League Mode
 * Manage multiple teams in your club
 * Player and staff profiles
@@ -39,7 +43,8 @@ Davey Jacobson, *Digital Platform Developer*, [USA Rugby](http://usarugby.org)
 
 Find out more about all each feature and more, please visit [our site](https://wpclubmanager.com).
 
-= Supported Sports =
+Supported Sports
+---
 
 * American Football
 * Australian Rules Football
@@ -61,15 +66,15 @@ Find out more about all each feature and more, please visit [our site](https://w
 
 Find extensive [documentation](http://docs.wpclubmanager.com) and [friendly support](https://wpclubmanager.com/support/) at our [plugin website](https://wpclubmanager.com).
 
-= Themes & Extensions =
-
+Themes & Extensions
+---
 The WP Club Manager plugin has a growing catalogue of themes to add extra functionality and a professional look to your club website. Browse through our collection of [WP Club Manager themes](https://wpclubmanager.com/themes/).
 
 * [Victory Theme](https://wpclubmanager.com/products/victory/)
 * [Scoreline Theme](https://wpclubmanager.com/products/scoreline/)
 
-= Included Languages =
-
+Included Languages
+---
 * Arabic – العربية (ar)
 * Bulgarian – Български (bg_BG)
 * Chinese (China) - 中文 (zh_CN)
@@ -98,58 +103,67 @@ The WP Club Manager plugin has a growing catalogue of themes to add extra functi
 * Turkish - Türkçe (tr_TR)
 * Vietnamese - Tiếng Việt (vi)
 
-= Getting Involved =
-
+Getting Involved
+===
 Translators can contribute to WP Club Manager translations at [GlotPress](https://translate.wordpress.org/projects/wp-plugins/wp-club-manager).
 
-= Please Rate and Enjoy! =
+Please Rate and Enjoy!
+---
 Please take a moment to leave a review on WordPress.org. Your feedback is much appreciated and helps towards the continued improvement of WP Club Manager.
 
-== Installation ==
+Installation
+===
 
-= Minimum Requirements =
+Minimum Requirements
+---
 
 * WordPress 4.7 or greater
 * PHP version 5.2.4 or greater (PHP 7.2 or greater is recommended)
 * MySQL version 5.0 or greater (MySQL 5.6 or greater is recommended)
 
-= Automatic installation =
+Automatic installation
+---
 
 Automatic installation is the easiest option as WordPress handles the file transfers itself and you don’t need to leave your web browser. To do an automatic install of WP Club Manager, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
 
 In the search field type “WP Club Manager” and click Search Plugins. Once you’ve found our plugin you can view details about it such as the the point release, rating and description. Most importantly of course, you can install it by simply clicking “Install Now”.
 
-= Manual installation =
+Manual installation
+---
 
 The manual installation method involves downloading our plugin and uploading it to your webserver via your favourite FTP application. The WordPress codex contains [instructions on how to do this here](http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
 
-= Updating =
+Updating
+---
 
 Automatic updates should work as expected but as always, it is recommended that you backup your site just in case any problems should occur during the update process.
 
-== Frequently Asked Questions ==
+Frequently Asked Questions
+===
 
-= Is this plugin suitable for managing a league website? =
-
+Is this plugin suitable for managing a league website?
+---
 Yes! Since version 2 WP Club Manager is built to manage either a single club or league website.
 
-= My sport is not supported. How can I add my sport? =
-
+My sport is not supported. How can I add my sport?
+---
 If your sport is not supported please [contact us](https://wpclubmanager.com/contact/) with details of your sport, including any information that may be useful, for example player stats info and player positions. If possible we will add it to the list of supported sports.
 
-= Where can I find documentation and support for the WP Club Manager plugin? =
-
+Where can I find documentation and support for the WP Club Manager plugin?
+---
 You can find documentation for the plugin at [WP Club Manager documentation](http://docs.wpclubmanager.com) or get [Support](https://wpclubmanager.com/support/)
 
-= Will WP Club Manager work with my theme? =
+Will WP Club Manager work with my theme?
+---
 
 Yes; WP Club Manager will work with any theme, but may require some styling to make it match nicely. Please see our [docs](https://docs.wpclubmanager.com/) for help. If you're looking for a theme with built in WP Club Manager integration we recommend [Victory](https://wpclubmanager.com/products/victory).
 
-= Where can I report bugs or contribute to the project? =
-
+Where can I report bugs or contribute to the project?
+---
 You can help improve this plugin by reporting any bugs or contributing to the source code at our [Github repository](https://github.com/ClubPress/wpclubmanager).
 
-== Screenshots ==
+Screenshots
+===
 
 1. General plugin settings
 2. WP Club Manager admin dashboard
@@ -163,9 +177,11 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 10. Front-end Player profile page
 11. Front-end League Table
 
-== Changelog ==
+Changelog
+===
 
-= 2.0.0 - 26/02/2019
+2.0.0 - 26/02/2019
+---
 
 * New - Added League mode
 * New - Added new League tables
@@ -211,29 +227,29 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 * Localisation - Updated all language files
 * Localisation - Updated wp-club-manager.pot
 
-= 1.5.10 - 17/11/2017
-
+1.5.10 - 17/11/2017
+---
 * Fix - Fixed broken match imports
 
-= 1.5.9 - 02/08/2017
-
+1.5.9 - 02/08/2017
+---
 * Tweak - Improved performance of head to head (Props to emco)
 * Tweak - Added some extra admin filters
 
-= 1.5.8 - 04/07/2017
-
+1.5.8 - 04/07/2017
+---
 * Tweak - Added more admin notices
 * Localisation - Updated wp-club-manager.pot
 * Localisation - Updated Turkish language (Thanks Kanaturye)
 
-= 1.5.7 - 30/04/2017
-
+1.5.7 - 30/04/2017
+---
 * Fix - Fixed a missing section field in cricket preset
 * Tweak - Added overs total for cricket matches
 * Tweak - Added more admin hooks
 
-= 1.5.6 - 12/04/2017
-
+1.5.6 - 12/04/2017
+---
 * New - Added cricket to preset sports
 * Tweak - Added more admin notices
 * Tweak - Added more admin hooks
@@ -241,19 +257,19 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 * Localisation - Updated Lithuanian language (Thanks as.giedrius)
 * Localisation - Updated wp-club-manager.pot
 
-= 1.5.5 - 06/04/2017
-
+1.5.5 - 06/04/2017
+---
 * New - Added birthdays widget
 * Fix - Fixed non-static php warning in plugin admin page
 * Tweak - Improved admin notices
 * Localisation - Updated wp-club-manager.pot
 
-= 1.5.4 - 29/03/2017
-
+1.5.4 - 29/03/2017
+---
 * Fixed update functions
 
-= 1.5.0 - 28/03/2017
-
+1.5.0 - 28/03/2017
+---
 * New - Added ability to set which player stats to display for each player
 * New - Added player stats display options for matche lineups
 * New - Added unused substitutes selection
@@ -268,8 +284,10 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 * Template - '/single-player/stats-table.php' - Added custom stats display filters
 * Localisation - Updated wp-club-manager.pot
 
-== Upgrade Notice ==
+Upgrade Notice
+===
 
-= 2.0.0 =
+2.0.0
+---
 2.0.0 is a major update so it is important that you make backups, and ensure themes and extensions are version 2.0.0 compatible before upgrading. See [release notes](http://wpclubmanager.com/wp-club-manager-2-0-released) for more details.
 Note: Version 2 includes improvements to many templates. If your theme uses custom templates then please ensure your theme supports version 2 **before** updating.
